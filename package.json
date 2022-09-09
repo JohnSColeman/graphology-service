@@ -1,0 +1,17 @@
+{
+  "name": "graphology-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "graphology": "^0.24.1",
+    "graphology-shortest-path": "^2.0.1"
+  }
+}
