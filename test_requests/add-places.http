@@ -1,0 +1,17 @@
+### add a route
+POST http://localhost:3000/route
+Content-Type: application/json
+
+{"places": ["X1Y1", "X4Y6"], "time": 10, "cost": 50}
+
+### add a route
+POST http://localhost:3000/route
+Content-Type: application/json
+
+{"places": ["X4Y6", "X2Y7"], "time": 5, "cost": 25}
+
+### add a route
+POST http://localhost:3000/route
+Content-Type: application/json
+
+{"places": ["X1Y1", "X9Y4"], "time": 15, "cost": 5}

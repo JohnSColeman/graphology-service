@@ -41,10 +41,10 @@ app.post("/route/", (req, res) => {
 });
 
 /**
- * Gets a places routes for the given place
+ * Gets the routes from the given place
  * return the places routes for success or 404 if the place does not exist
  */
-app.get("/place/:place", (req, res) => {
+app.get("/route/:place", (req, res) => {
     const place = req.params.place;
     if (graph.hasNode(place)) {
         const routes = []
@@ -52,12 +52,13 @@ app.get("/place/:place", (req, res) => {
             routes.push({ places: [source, target], ...attributes })
         });
         res.json({ routes: routes });
+    } else {
+        res.sendStatus(404);
     }
-    res.sendStatus(404);
 });
 
 /**
- * Gets all the places.
+ * Gets all the routes.
  */
 app.get("/route", (_req, res) => {
     const routes = graph.mapEdges((_, attributes, source, target) => {
